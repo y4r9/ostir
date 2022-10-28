@@ -40,9 +40,9 @@ class ViennaRNA(dict):
 
         self.install_location = os.path.dirname(os.path.realpath(__file__))
         if material == 'rna1999':
-            self["material"] = f"-P {self.install_location}/rna_turner1999.par "
+            self["material"] = f"-P \"{self.install_location}/rna_turner1999.par\" "
         elif material == 'rna2004':
-            self["material"] = f"-P {self.install_location}/rna_turner2004.par "
+            self["material"] = f"-P \"{self.install_location}/rna_turner2004.par\" "
         else:
             self["material"] = ''
 
@@ -72,9 +72,9 @@ class ViennaRNA(dict):
             material = self["material"]
 
             if material == 'rna1999':
-                param_file = f"-P {self.install_location}/rna_turner1999.par"
+                param_file = f"-P \"{self.install_location}/rna_turner1999.par\""
             elif material == 'rna2004':
-                param_file = f"-P {self.install_location}/rna_turner2004.par"
+                param_file = f"-P \"{self.install_location}/rna_turner2004.par\""
             else:
                 param_file = ''
 
